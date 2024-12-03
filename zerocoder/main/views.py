@@ -9,11 +9,11 @@ def home(request):
 
     # Возвращаем HTML с ссылками
     return HttpResponse(f"""
-           <h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Щёлкнем на вторую страничку</a></h1>
-           <p><a href="{data_url}">Перейти на страницу Data</a></p>
-           <p><a href="{test_url}">Перейти на страницу Test</a></p>
+           <h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Щёлкнем на вторую страничку в main</a></h1>
+           <p><a href="{data_url}">Перейти на страницу Data в myapp</a></p>
+           <p><a href="{test_url}">Перейти на страницу Test в myapp</a></p>
        """)
     #return HttpResponse("<h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Дунем на вторую страничку</a></h1>")
 
 def new(request):
-    return HttpResponse("<h1>Это вторая страничка моего проекта на Django</h1>")
+    return HttpResponse("<h1>Это вторая страничка моего проекта на Django в main</h1>")
