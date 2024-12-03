@@ -1,8 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.urls import reverse
 # Create your views here.
-def index(request):
-    return HttpResponse("<h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Дунем на вторую страничку</a></h1>")
+def home(request):
+    # Формируем ссылки на страницы myapp
+    data_url = reverse('data-view')  # Используем имя маршрута для /myapp/data
+    test_url = reverse('test-view')  # Используем имя маршрута для /myapp/test
+
+    # Возвращаем HTML с ссылками
+    return HttpResponse(f"""
+           <h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Щёлкнем на вторую страничку</a></h1>
+           <p><a href="{data_url}">Перейти на страницу Data</a></p>
+           <p><a href="{test_url}">Перейти на страницу Test</a></p>
+       """)
+    #return HttpResponse("<h1>Это мой первый проект на Django<br><a href='http://127.0.0.1:8000/new'>Дунем на вторую страничку</a></h1>")
 
 def new(request):
     return HttpResponse("<h1>Это вторая страничка моего проекта на Django</h1>")
