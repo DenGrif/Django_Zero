@@ -16,16 +16,17 @@
     {% endblock %}
 </head>
 <body>
+    {% include 'main/nav.html' %}
 
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4">
                 <aside>
-                    <img src="{% static 'main/img/kat.jpeg' %}" alt="Котяра подглядывает" width="450">
+                    <img src="{% static 'main/img/kat.jpeg' %}" alt="Котяра подглядывает" width="350">
                     <span>CatDjango</span>
                     <ul>
-                        <li><a href="/">Главная</a></li>
-                        <li><a href="new">Второстепенная</a></li>
+                        <li><a href="{% url 'home' %}">Главная</a></li>
+                        <li><a href="{% url 'page2' %}">Второстепенная</a></li>
                     </ul>
                 </aside>
             </div>
@@ -37,6 +38,8 @@
             </div>
         </div>
     </div>
+
+    {% include 'main/footer.html' %}
 
     <!-- Подключение скриптов Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

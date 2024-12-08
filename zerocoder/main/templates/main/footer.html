@@ -1,0 +1,31 @@
+<footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">CatDjango</h5>
+                <p>
+                    CatDjango — платформа, объединяющая любителей кошек и разработчиков Django. Присоединяйтесь к нам, чтобы узнать больше о мире кошек и кодинга!
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Навигация</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="{% url 'home' %}" class="text-dark">Главная</a></li>
+                    <li><a href="{% url 'page2' %}" class="text-dark">Вторая страница</a></li>
+                    <li><a href="{% url 'page3' %}" class="text-dark">Третья страница</a></li>
+                    <li><a href="{% url 'page4' %}" class="text-dark">Четвертая страница</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Контакты</h5>
+                <ul class="list-unstyled mb-0">
+                    <li>Email: support@catdjango.com</li>
+                    <li>Телефон: +1 (555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3 bg-dark text-white">
+        © 2024 CatDjango. Все права защищены.
+    </div>
+</footer>

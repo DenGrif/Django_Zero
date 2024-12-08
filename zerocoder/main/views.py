@@ -3,10 +3,19 @@ from django.http import HttpResponse
 from django.urls import reverse
 # Create your views here.
 def index(request):
-    return render(request, 'main/index.html')
+    data = {
+        'caption': 'CatDjango'
+    }
+    return render(request, 'main/index.html', data)
 
 def new(request):
     return render(request, 'main/new.html')
+
+def page3(request):
+    return render(request, 'main/page3.html')
+
+def page4(request):
+    return render(request, 'main/page4.html')
 
 
 # def home(request):
