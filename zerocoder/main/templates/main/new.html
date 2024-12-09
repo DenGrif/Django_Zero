@@ -1,9 +1,59 @@
 {% extends 'main/layoute.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Вторая страничка </title>
+    <title>Как начать работать с CatDjango</title>
 {% endblock %}
 
-{% block content%}
-    <h4>Это вторая страница сайта по уроку номер 2</h4>
+{% block content %}
+<div class="container">
+    <h1 class="text-center mb-4">Как начать работать с CatDjango</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>1. Создайте аккаунт</h3>
+            <p>
+                Присоединяйтесь к CatDjango, зарегистрировав аккаунт. Это позволит вам сохранять любимые материалы, добавлять комментарии и делиться фотографиями своих кошек с другими пользователями.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'main/img/cat_signup.jpg' %}" class="img-fluid rounded" alt="Регистрация на CatDjango">
+
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col-md-6 order-md-2">
+            <h3>2. Исследуйте контент</h3>
+            <p>
+                Вдохновляйтесь статьями, советами по разработке Django и разделом, посвящённым уходу за кошками. Наши авторы регулярно добавляют новые материалы для пользователей всех уровней.
+            </p>
+        </div>
+        <div class="col-md-6 order-md-1">
+            <img src="{% static 'main/img/cat_content.jpg' %}" class="img-fluid rounded" alt="Контент CatDjango">
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>3. Делитесь своими находками</h3>
+            <p>
+                Поделитесь своими проектами на Django, опытом разработки или фотографиями своих питомцев. Мы ценим вклад каждого пользователя!
+            </p>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'main/img/cat_share.jpg' %}" class="img-fluid rounded" alt="Делитесь с CatDjango">
+        </div>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="text-center">
+        <h4>Присоединяйтесь к CatDjango и сделайте первый шаг в мир, где кошки и код живут в гармонии!</h4>
+    </div>
+</div>
 {% endblock %}
