@@ -1,10 +1,15 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
-def data_view(request):
-    return HttpResponse("<h1>Страница Data</h1><p>Это страница с данными в приложении MyApp.</p>")
 
-def test_view(request):
-    return HttpResponse("<h1>Страница Test</h1><p>Это тестовая страница в приложении MyApp.</p>")
+def home(request):
+    data = {
+        'caption': 'CatDjango'
+    }
+    return render(request, 'myapp/news.html', data)
+
+# def test_view(request):
+#     return HttpResponse("<h1>Страница Test</h1><p>Это тестовая страница в приложении MyApp.</p>")
 
 
 
