@@ -1,2 +1,2 @@
-# Django_Zero
+Django_Zero
 Проект CatDjango на Zerocoder
