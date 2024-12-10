@@ -1,12 +1,15 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import News_post
 
 
 def home(request):
-    data = {
-        'caption': 'CatDjango'
+    news = News_post.objects.all()
+    context = {
+        'caption': 'CatDjango',
+        'news': news
     }
-    return render(request, 'myapp/news.html', data)
+    return render(request, 'myapp/news.html',context)
 
 # def test_view(request):
 #     return HttpResponse("<h1>Страница Test</h1><p>Это тестовая страница в приложении MyApp.</p>")
