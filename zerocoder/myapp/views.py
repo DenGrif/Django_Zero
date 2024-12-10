@@ -9,7 +9,11 @@ def home(request):
         'caption': 'CatDjango',
         'news': news
     }
-    return render(request, 'myapp/news.html',context)
+    return render(request, 'myapp/news.html', context)
+
+
+
+
 
 # def test_view(request):
 #     return HttpResponse("<h1>Страница Test</h1><p>Это тестовая страница в приложении MyApp.</p>")
