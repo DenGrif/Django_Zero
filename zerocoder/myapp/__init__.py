@@ -112,3 +112,27 @@
 #     </div>
 # </div>
 # {% endblock %}
+
+# < h4 > < / h4 >
+# < h5 > < / h5 >
+# < p > {{new.text}} < / p >
+# < p > Автор: {{new.author.username}} < / p >
+# < p > Опубликовано: {{new.pub_date}} < / p >
+# < hr >
+# ------------------------
+# <label for="newsTitle" class="form-label">Заголовок новости</label>
+#                     <input type="text" id="newsTitle" name="title" class="form-control" placeholder="Введите заголовок" required>
+#
+# <label for="newsDescription" class="form-label">Краткое описание новости</label>
+#                     <input type="text" id="newsDescription" name="short_description" class="form-control" placeholder="Введите краткое описание" required>
+#
+# <label for="newsContent" class="form-label">Содержание новости</label>
+#                     <textarea id="newsContent" name="content" class="form-control" rows="5" placeholder="Введите текст новости" required></textarea>
+#
+# <label for="newsDate" class="form-label">Дата публикации</label>
+#                     <input type="date" id="newsDate" name="pub_date" class="form-control" required>
+#
+# <div class="mb-3">
+#                     <label for="newsTime" class="form-label">Время публикации</label>
+#                     <input type="time" id="newsTime" name="pub_time" class="form-control" required>
+#                 </div>

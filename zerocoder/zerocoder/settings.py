@@ -56,7 +56,7 @@ ROOT_URLCONF = 'zerocoder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Путь к глобальным шаблонам
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
